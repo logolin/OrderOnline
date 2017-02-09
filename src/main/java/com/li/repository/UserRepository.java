@@ -1,8 +1,8 @@
-package com.zheng.repository;
+package com.li.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.zheng.domain.User;
+import com.li.domain.User;
 
 public interface UserRepository extends CrudRepository<User, Integer> {
 

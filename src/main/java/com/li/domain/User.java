@@ -1,4 +1,4 @@
-package com.zheng.domain;
+package com.li.domain;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
