@@ -22,11 +22,11 @@
 		http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.0.xsd">
 	<context:annotation-config />
 	<!-- spring扫描注解的配置 -->
-	<context:component-scan base-package="com.zheng.service, com.zheng.controller"></context:component-scan>
+	<context:component-scan base-package="com.li.service, com.li.controller"></context:component-scan>
 	<mvc:annotation-driven></mvc:annotation-driven>
 	<tx:annotation-driven/>
 	<aop:aspectj-autoproxy proxy-target-class="true" expose-proxy="true"/>
-	<jpa:repositories base-package="com.zheng.repository"></jpa:repositories>
+	<jpa:repositories base-package="com.li.repository"></jpa:repositories>
 	<!-- 开启这个配置，spring才能识别@Scheduled注解 -->
 	<task:annotation-driven />
 	
@@ -34,7 +34,7 @@
 		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
 		<property name="url" value="jdbc:mysql://localhost:3306/orderOnline?characterEncoding=utf8"></property>
 		<property name="username" value="root"></property>
-		<property name="password" value=""></property>
+		<property name="password" value="140808"></property>
 	</bean>
 	
 	<bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
@@ -50,7 +50,7 @@
 	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="jpaVendorAdapter" ref="jpaVendorAdapter"></property>
-		<property name="packagesToScan" value="com.zheng.domain"></property>
+		<property name="packagesToScan" value="com.li.domain"></property>
 	</bean>
 	
 	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
