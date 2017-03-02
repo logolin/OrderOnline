@@ -5,8 +5,24 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>登录</title>
+<style>
+body{background:#ABC;}
+</style>
 </head>
 <body>
-	<h2>登录:自己写吧。</h2>
+    <div style="border:1px solid #000;margin-left:36%;margin-right:36%;margin-top:18%;text-align:center;color:blue;'">
+	<h2><strong>登录</strong></h2><br>
+	<table>
+	<tr>
+	User:&nbsp;<input type ="text" name="user" />
+	</tr><br><br>
+	<tr>
+	Password:<input type ="password" name="password" />
+	</tr><br><br>
+	<tr>
+	<input type ="submit" value ="登录" name ="a" />
+	</tr>
+	</table>
+	</div>
 </body>
 </html>
