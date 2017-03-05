@@ -23,7 +23,7 @@
 	<input type="password" id="Repass" name="Repass" placeholder="再次输入密码" autocomplete="off"/>
 	</tr><br><br>
 	<tr>
-	<input type="phoneNumber" id="phoneNumber" name="phoneNumber" onclick="checkForm()" placeholder="输入手机号码" autocomplete="off"/>
+	<input type="phoneNumber" id="phoneNumber" name="phoneNumber" placeholder="输入手机号码" autocomplete="off"/>
 	</tr><br><br>
 	<tr>
 	<input type="email" id="email" name="email" placeholder="输入邮箱地址" autocomplete="off"/>
@@ -59,40 +59,13 @@ function check(){
 	      alert("两次密码不同，请重新输入");
 	      return false;
 	   }
-}
-/**
-function checkForm(){
-	var phoneNumber = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
-	if(!phoneNumber.test($("#phoneNumber").val())) 
+   var phoneTest = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/;
+   if(!phoneTest.test(phoneNumber)) 
 	{ 
 	    alert('请输入有效的手机号码！'); 
 	    return false; 
-	} 
+	}
 }
-**/
-function checkForm(phoneNumber) 
-{ 
-    if(phoneNumber.length==0) 
-    { 
-       alert('输入手机号码'); 
-       document.form1.phoneNumber.focus(); 
-       return false; 
-    }     
-    if(phoneNumber.length!=11) 
-    { 
-        alert('请输入有效的手机号码！'); 
-        document.form1.phoneNumber.focus(); 
-        return false; 
-    } 
-     
-    var phoneNumber = /^(((13[0-9]{1})|(15[0-9]{1})|(18[0-9]{1}))+\d{8})$/; 
-    if(!phoneNumber.test(phoneNumber)) 
-    { 
-        alert('请输入有效的手机号码！'); 
-        document.form1.phoneNumber.focus(); 
-        return false; 
-    } 
-} 
 
 </script>
 
