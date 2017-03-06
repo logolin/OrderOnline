@@ -65,6 +65,20 @@ function check(){
 	    alert('请输入有效的手机号码！'); 
 	    return false; 
 	}
+   
+   var emailTest = /^[A-Za-zd]+([-_.][A-Za-zd]+)*@([A-Za-zd]+[-.])+[A-Za-zd]{2,5}$/;
+   if(!emailTest.test(email))
+	   {
+	    alert('邮箱格式不对'); 
+	    return false;
+	   }
+
+   var pwTest = /^(?:(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])|(?=.*[A-Z])(?=.*[a-z])(?=.*[^A-Za-z0-9])|(?=.*[A-Z])(?=.*[0-9])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*[0-9])(?=.*[^A-Za-z0-9])).{6,}|(?:(?=.*[A-Z])(?=.*[a-z])|(?=.*[A-Z])(?=.*[0-9])|(?=.*[A-Z])(?=.*[^A-Za-z0-9])|(?=.*[a-z])(?=.*[0-9])|(?=.*[a-z])(?=.*[^A-Za-z0-9])|(?=.*[0-9])(?=.*[^A-Za-z0-9])|).{6,}$/;
+   if(!pwTest.test(password))
+	   {
+	   alert('密码格式不对'); 
+	    return false;
+	   }
 }
 
 </script>
