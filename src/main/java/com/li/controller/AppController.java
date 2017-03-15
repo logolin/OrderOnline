@@ -2,6 +2,7 @@ package com.li.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @RequestMapping("/")
@@ -21,10 +22,24 @@ public class AppController {
 	 * 显示登录页面
 	 * @return
 	 */
-	@RequestMapping("login")
+	@RequestMapping(value = "login", method = RequestMethod.GET)
 	public String loginGet() {
 		
 		return "login";
+	}
+	
+	/**
+	 * 用户登录
+	 * @param userName
+	 * @param password
+	 * @return
+	 */
+	@RequestMapping(value = "login", method = RequestMethod.POST)
+	public String loginPost(String userName, String password) {
+		
+		System.out.println("用户名：" + userName);
+		System.out.println("密码：" + password);
+		return "redirect:login";
 	}
 	
 	/**
@@ -36,4 +51,5 @@ public class AppController {
 		
 		return "register";
 	}
+	
 }

@@ -10,20 +10,22 @@
 </head>
 <body style="background-image: url('${ctx}/static/img/1.jpg');background-size:cover;">
     <div style="border:1px solid #000;margin-left:36%;margin-right:36%;margin-top:18%;text-align:center;color:blue;'">
-	<h2><strong>登录</strong></h2><br>
-	<table>
-	<tr>
-	User:<input type ="text" id="userName" name="userName" />
-	</tr><br><br>
-	<tr>
+		<h2><strong>登录</strong></h2><br>
+		<form method="post">
+			<table>
+			<tr>
+			User:<input type ="text" id="userName" name="userName" />
+			</tr><br><br>
+			<tr>
+				
+			Password:<input type ="password" id="password" name="password" />
+			</tr><br><br>
+			<tr>
+			<button type="submit" onclick="check()">登录</button>
 		
-	Password:<input type ="password" id="password" name="password" />
-	</tr><br><br>
-	<tr>
-	<button type="submit" onclick="check()">登录</button>
-
-	</tr>
-	</table>
+			</tr>
+			</table>
+		</form>
 	</div>
 </body>
 <script type = text/javascript>
